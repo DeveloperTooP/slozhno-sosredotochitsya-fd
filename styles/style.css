@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 
@@ -44,7 +45,7 @@
   block-size: 9px;
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--accent-color, #ff0070);
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
   background: var(--accent-color, #ff0070);
 }
 
@@ -190,7 +191,7 @@
   font-size: var(--main-font-size);
 }
 
-.main__section-lists {
+.content__list-items {
   display: grid;
   gap: 27px;
 }
@@ -233,6 +234,11 @@
   place-items: center;
 }
 
+/* Сброс стилей в состоянии фокуса при наведении мышкой */
+.text__link:focus {
+  outline: none;
+}
+
 /* Стили для ссылки при видимом фокусе */
 .text__link:focus-visible {
   outline: 1px solid var(--text-color);
@@ -248,11 +254,6 @@
 /* Стили для ссылки при наведении */
 .text__link:hover {
   border-block-end: 1px solid var(--text-color);
-}
-
-/* Сброс стилей в состоянии фокуса при наведении мышкой */
-.text__link:focus {
-  outline: none;
 }
 
 
@@ -274,9 +275,10 @@
     padding-inline-start: 0;
   }
 
-  .main__section-lists {
+  .content__list-items {
     gap: 24px;
   }
+
   .page__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
